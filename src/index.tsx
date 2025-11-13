@@ -29,13 +29,23 @@ root.render(
 );
 
 inSim.on("connect", () => log("InSim connected"));
-inSim.on("disconnect", () => log("InSim disconnected"));
+inSim.on("disconnect", () => {
+  log("InSim disconnected");
+  process.exit(1);
+});
 
 inSim.on(PacketType.ISP_VER, (packet) => {
   log(`Connected to LFS ${packet.Product} ${packet.Version}`);
 });
 
-process.on("uncaughtException", (error) => {
-  log(error);
+process.on("uncaughtException", (err) => {
+  log("Uncaught Exception:");
+  log(err);
   inSim.disconnect();
+  process.exit(1);
+});
+
+process.on("SIGINT", () => {
+  inSim.disconnect();
+  process.exit(0);
 });
