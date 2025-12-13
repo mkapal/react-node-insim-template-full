@@ -15,14 +15,14 @@ importers:
         specifier: ^17.2.3
         version: 17.2.3
       node-insim:
-        specifier: ^5.0.1
-        version: 5.0.1
+        specifier: ^6.0.0
+        version: 6.0.0
       react:
         specifier: ^18.3.1
         version: 18.3.1
       react-node-insim:
-        specifier: ^0.2.0
-        version: 0.2.0(@types/react@19.2.4)(node-insim@5.0.1)(react@18.3.1)(supports-color@10.2.2)
+        specifier: ^0.3.1
+        version: 0.3.1(@types/react@19.2.4)(node-insim@6.0.0)(react@18.3.1)(supports-color@10.2.2)
       supports-color:
         specifier: ^10.2.2
         version: 10.2.2
@@ -1547,8 +1547,8 @@ packages:
   nice-try@1.0.5:
     resolution: {integrity: sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==}
 
-  node-insim@5.0.1:
-    resolution: {integrity: sha512-4/qnbf6Mh6l6WvQDDOtNFlHvNI/1nZZzF7Bh2OocxJEIBNUfMxWXH7BCoL/ua9eIJ2aMAoHuGDRfwAQ7VOmLsA==}
+  node-insim@6.0.0:
+    resolution: {integrity: sha512-ujjKYAEc3pGk9vaeG+x1KVR2xicSbQs6MvZqTD50mHTZmkfL3Pnu7tijOv6ItfbLnzeMPfJlvpUJTjJUaDVK0A==}
 
   normalize-package-data@2.5.0:
     resolution: {integrity: sha512-/5CMN3T0R4XTj4DcGaexo+roZSdSFW/0AOOTROrjxzCG1wrWXEsGbRKevjlIL+ZDE4sZlJr5ED4YW0yqmkK+eA==}
@@ -1714,11 +1714,15 @@ packages:
   ramda@0.30.1:
     resolution: {integrity: sha512-tEF5I22zJnuclswcZMc8bDIrwRHRzf+NqVEmqg50ShAZMP7MWeR/RGDthfM/p+BlqvF2fXAzpn8i+SJcYD3alw==}
 
-  react-node-insim@0.2.0:
-    resolution: {integrity: sha512-YexIDIzTwCtQgymIQnHJJRbEeMoqksVbQAZLy6jEHqmZbJMRhM00uk6UTAQrcSddj+JFSxyOwqLpU5v507gw2w==}
+  react-node-insim@0.3.1:
+    resolution: {integrity: sha512-Ie7Xc4Q/A9uum7tWfGOp5rNm35z05JJN6KtrZlVgTuk9yfMlZ/e7dgW1efnyvYCRA+Ec142BnDfH3T0z+WFbSQ==}
     peerDependencies:
-      node-insim: ^0.9.1 || 1 || 2 || 3 || 4 || 5
+      node-insim: ^0.9.1 || 1 || 2 || 3 || 4 || 5 || 6
       react: '>=18'
+      react-devtools-core: ^6.1.5
+    peerDependenciesMeta:
+      react-devtools-core:
+        optional: true
 
   react-reconciler@0.29.0:
     resolution: {integrity: sha512-wa0fGj7Zht1EYMRhKWwoo1H9GApxYLBuhoAuXN0TlltESAjDssB+Apf0T/DngVqaMyPypDmabL37vw/2aRM98Q==}
@@ -3643,7 +3647,7 @@ snapshots:
 
   nice-try@1.0.5: {}
 
-  node-insim@5.0.1:
+  node-insim@6.0.0:
     dependencies:
       '@types/debug': 4.1.12
       '@types/lodash.defaults': 4.2.9
@@ -3807,14 +3811,14 @@ snapshots:
 
   ramda@0.30.1: {}
 
-  react-node-insim@0.2.0(@types/react@19.2.4)(node-insim@5.0.1)(react@18.3.1)(supports-color@10.2.2):
+  react-node-insim@0.3.1(@types/react@19.2.4)(node-insim@6.0.0)(react@18.3.1)(supports-color@10.2.2):
     dependencies:
       '@types/react-reconciler': 0.28.9(@types/react@19.2.4)
       '@welefen/grid-layout': 1.1.0
       bunshi: 2.1.5(react@18.3.1)
       debug: 4.4.3(supports-color@10.2.2)
       jotai: 2.15.1(@types/react@19.2.4)(react@18.3.1)
-      node-insim: 5.0.1
+      node-insim: 6.0.0
       ramda: 0.30.1
       react: 18.3.1
       react-reconciler: 0.29.0(react@18.3.1)
