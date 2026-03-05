@@ -14,7 +14,8 @@
     "lint:fix": "eslint \"./src/**/*\" --ext .js,.ts --fix",
     "test": "run-s test:compile \"test:run {@}\" --",
     "test:compile": "tsc -p tsconfig.test.json",
-    "test:run": "vitest"
+    "test:run": "vitest",
+    "checks": "run-s lint:fix format test build"
   },
   "dependencies": {
     "debug": "^4.4.3",
