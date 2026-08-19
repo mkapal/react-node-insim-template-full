@@ -1,2 +1,5 @@
-onlyBuiltDependencies:
-  - esbuild
+minimumReleaseAge: 1080
+minimumReleaseAgeExclude:
+  - react-node-insim
+allowBuilds:
+  esbuild: true
